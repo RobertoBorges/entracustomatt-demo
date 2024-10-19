@@ -33,6 +33,7 @@ namespace nonprodborges
             r.data.actions[0].claims.CustomRoles.Add("Writer");
             r.data.actions[0].claims.CustomRoles.Add("Editor");
             r.data.actions[0].claims.CustomFreeText = "This is a custom free text";
+            _logger.LogInformation($"Returning claims to Microsoft Entra {JsonConvert.SerializeObject(r)}");
             return new OkObjectResult(r);
         }
     }

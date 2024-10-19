@@ -1,0 +1,83 @@
+# POST https://woodgrove-airlift-api.azurewebsites.net/OnAttributeCollectionStart
+POST http://localhost:7071/api/CustomAuthenticationExtensionsAPI
+Content-Type: application/json
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6ImdRNUdJYUM4aThWRzdLVWliWVJqaDY5ejFlZEpfNWxOYy1lREdtVjZ4QWciLCJhbGciOiJSUzI1NiIsIng1dCI6IjNQYUs0RWZ5Qk5RdTNDdGpZc2EzWW1oUTVFMCIsImtpZCI6IjNQYUs0RWZ5Qk5RdTNDdGpZc2EzWW1oUTVFMCJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83YmY3Y2EwMi0yMGE2LTRjYzctYTM1ZC04ZmE5YzVmZDQ1MjkvIiwiaWF0IjoxNzI5MzU0NTg4LCJuYmYiOjE3MjkzNTQ1ODgsImV4cCI6MTcyOTM1OTI2MCwiYWNjdCI6MCwiYWNyIjoiMSIsImFjcnMiOlsidXJuOnVzZXI6cmVnaXN0ZXJzZWN1cml0eWluZm8iXSwiYWlvIjoiQVZRQXEvOFlBQUFBbkVHaXhUOVhEUXVSNm5HK3NyVFRKMUcxRnNReGRjQlZ1R21xc01zVkVNVDJrSDVDSzJqUDZrdDVPajlGSWszZ1ZRZ0ZVZ09SNFlaV3RWUlIxcDE5ajF3aWZ4czdLeTJMTk50SDByNG5WRDg9IiwiYW1yIjpbInB3ZCIsInJzYSIsIm1mYSJdLCJhcHBfZGlzcGxheW5hbWUiOiJ3b29kZ3JvdmUtYWlybGlmdC1hcGkiLCJhcHBpZCI6ImQwYmUzYWY1LTNhYzItNGMwNC04ZDkxLTIzNGI0MTVjNTBmNCIsImFwcGlkYWNyIjoiMSIsImRldmljZWlkIjoiMjc5MDFjN2MtZTQ4OS00ZTdjLTkzYjgtM2FlYzgwZDQ5MmU4IiwiZmFtaWx5X25hbWUiOiJSb2JlcnRvIiwiZ2l2ZW5fbmFtZSI6IlN5c3RlbSIsImlkdHlwIjoidXNlciIsImlwYWRkciI6IjIwLjExNC4xNDQuNDkiLCJuYW1lIjoiU3lzdGVtIEFkbWluaXN0cmF0b3IiLCJvaWQiOiIzZGE3YTYxZi03Y2RjLTRjODItYTgyMy01ZDAzYjM1ODQ2NmEiLCJwbGF0ZiI6IjMiLCJwdWlkIjoiMTAwMzIwMDI1M0QyQjQ0NiIsInJoIjoiMC5BWHdBQXNyM2U2WWd4MHlqWFktcHhmMUZLUU1BQUFBQUFBQUF3QUFBQUFBQUFBRE1BS3cuIiwic2NwIjoiZW1haWwgb3BlbmlkIHByb2ZpbGUgVXNlci5SZWFkIiwic2lnbmluX3N0YXRlIjpbImlua25vd25udHdrIiwia21zaSJdLCJzdWIiOiI5ZC1HbDNDYnVPQWRMUWJmODNoTlJvZllqUV85LWhObUVZNWZ0dmozVnc0IiwidGVuYW50X3JlZ2lvbl9zY29wZSI6Ik5BIiwidGlkIjoiN2JmN2NhMDItMjBhNi00Y2M3LWEzNWQtOGZhOWM1ZmQ0NTI5IiwidW5pcXVlX25hbWUiOiJhZG1pbkBNbmdFbnZNQ0FQMDA4MzU1Lm9ubWljcm9zb2Z0LmNvbSIsInVwbiI6ImFkbWluQE1uZ0Vudk1DQVAwMDgzNTUub25taWNyb3NvZnQuY29tIiwidXRpIjoibTExQ2lPbm5aMGFwN1VmTGREb2lBQSIsInZlciI6IjEuMCIsIndpZHMiOlsiMTEyY2ExYTItMTVhZC00MTAyLTk5NWUtNDViMGJjNDc5YTZhIiwiZjJlZjk5MmMtM2FmYi00NmI5LWI3Y2YtYTEyNmVlNzRjNDUxIiwiNjJlOTAzOTQtNjlmNS00MjM3LTkxOTAtMDEyMTc3MTQ1ZTEwIiwiNThhMTNlYTMtYzYzMi00NmFlLTllZTAtOWMwZDQzY2Q3ZjNkIiwiODQyNGM2ZjAtYTE4OS00OTllLWJiZDAtMjZjMTc1M2M5NmQ0IiwiYjc5ZmJmNGQtM2VmOS00Njg5LTgxNDMtNzZiMTk0ZTg1NTA5Il0sInhtc19pZHJlbCI6IjEgMTIiLCJ4bXNfc3QiOnsic3ViIjoiMEdaU0phZlJKX1ZCcS1JaVNxSHFwQkRUbVFaSmxPSnprdUFkVjRCZmhxTSJ9LCJ4bXNfdGNkdCI6MTY2OTkwNzQ2N30.WcXcv6tnVO1mpCnu0_hlZvvaE1brPqBBWR5buA-cDMHVN8MmSlT3IRddzISSCJIE-7fNQHNCgCTTkokkirL9m-oLF5N_QV9muoGVd0yJc3G2AGah8VlKPt-phuKkInPEMLza9CNEA8E1FG0roPrT6ZNNubzF0GXSAYjwsdIWDZt6oJV-A_Mh0b1ZSPhmLgKloo_BcQWcHY5lB5G05epQFC0YUSiiuKQRRvsVsMo-vlsE3C9WNXCl81Jn8QWZQ-dBksHaSJjSEyv1UQUdK1bzEjUdm3Qe3K9v4PAUfcFavuHgE0-73VcEf5JevtT_ydYZU2QjcOAfoQsolDD6N6VVyg
+
+
+{
+  "data": {
+    "@odata.type": "string",
+    "tenantId": "string",
+    "authenticationEventListenerId": "string",
+    "customAuthenticationExtensionId": "string",
+    "authenticationContext": {
+      "correlationId": "string",
+      "client": {
+        "ip": "string",
+        "locale": "string",
+        "market": "string"
+      },
+      "protocol": "string",
+      "clientServicePrincipal": {
+        "id": "string",
+        "appId": "string",
+        "appDisplayName": "string",
+        "displayName": "string"
+      },
+      "resourceServicePrincipal": {
+        "id": "string",
+        "appId": "string",
+        "appDisplayName": "string",
+        "displayName": "string"
+      },
+      "user": {
+        "displayName": "string",
+        "id": "string",
+        "userPrincipalName": "string",
+        "userType": "string",
+        "mail": "string"
+      }
+    },
+    "userSignUpInfo": {
+      "attributes": {
+        "email": {
+          "value": "string",
+          "@odata.type": "string",
+          "attributeType": "string"
+        },
+        "city2": {
+          "value": "string",
+          "@odata.type": "string",
+          "attributeType": "string"
+        },
+        "country": {
+          "value": "string",
+          "@odata.type": "string",
+          "attributeType": "string"
+        },
+        "displayName": {
+          "value": "string",
+          "@odata.type": "string",
+          "attributeType": "string"
+        },
+        "extension_0cae61cc83e94edd978ec2fde3c5f2f3_SpecialDiet": {
+          "value": "string",
+          "@odata.type": "string",
+          "attributeType": "string"
+        },
+        "extension_0cae61cc83e94edd978ec2fde3c5f2f3_PromoCode": {
+          "value": "string",
+          "@odata.type": "string",
+          "attributeType": "string"
+        }
+      },
+      "identities": [
+        {
+          "signInType": "string",
+          "issuer": "string",
+          "issuerAssignedId": "string"
+        }
+      ]
+    }
+  }
+}

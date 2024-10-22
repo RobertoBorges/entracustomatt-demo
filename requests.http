@@ -1,82 +1,27 @@
-# POST https://woodgrove-airlift-api.azurewebsites.net/OnAttributeCollectionStart
-POST http://localhost:7071/api/CustomAuthenticationExtensionsAPI
-Content-Type: application/json
-Authorization: bearer eyJ0eXAiOiJKV1QiLCJub25
+@redirectUri = https://oidcdebugger.com/debug
+@tenantId = 7bf7ca02-....
+@clientId = 32664b05-....
+@clientSecret = cxr8Q....
 
-{
-  "data": {
-    "@odata.type": "string",
-    "tenantId": "string",
-    "authenticationEventListenerId": "string",
-    "customAuthenticationExtensionId": "string",
-    "authenticationContext": {
-      "correlationId": "string",
-      "client": {
-        "ip": "string",
-        "locale": "string",
-        "market": "string"
-      },
-      "protocol": "string",
-      "clientServicePrincipal": {
-        "id": "string",
-        "appId": "string",
-        "appDisplayName": "string",
-        "displayName": "string"
-      },
-      "resourceServicePrincipal": {
-        "id": "string",
-        "appId": "string",
-        "appDisplayName": "string",
-        "displayName": "string"
-      },
-      "user": {
-        "displayName": "string",
-        "id": "string",
-        "userPrincipalName": "string",
-        "userType": "string",
-        "mail": "string"
-      }
-    },
-    "userSignUpInfo": {
-      "attributes": {
-        "email": {
-          "value": "string",
-          "@odata.type": "string",
-          "attributeType": "string"
-        },
-        "city2": {
-          "value": "string",
-          "@odata.type": "string",
-          "attributeType": "string"
-        },
-        "country": {
-          "value": "string",
-          "@odata.type": "string",
-          "attributeType": "string"
-        },
-        "displayName": {
-          "value": "string",
-          "@odata.type": "string",
-          "attributeType": "string"
-        },
-        "extension_0cae61cc83e94edd978ec2fde3c5f2f3_SpecialDiet": {
-          "value": "string",
-          "@odata.type": "string",
-          "attributeType": "string"
-        },
-        "extension_0cae61cc83e94edd978ec2fde3c5f2f3_PromoCode": {
-          "value": "string",
-          "@odata.type": "string",
-          "attributeType": "string"
-        }
-      },
-      "identities": [
-        {
-          "signInType": "string",
-          "issuer": "string",
-          "issuerAssignedId": "string"
-        }
-      ]
-    }
-  }
-}
+@authorizationEndpoint = https://login.microsoftonline.com/{{tenantId}}/oauth2/authorize
+@tokenEndpoint = https://login.microsoftonline.com/{{tenantId}}/oauth2/token
+
+
+### Example 1: Authorization User clicked on Signin button
+https://login.microsoftonline.com/{{tenantId}}/oauth2/authorize?client_id={{clientId}}&redirect_uri={{redirectUri}}&scope=https://graph.windows.net&response_type=code%20id_token&response_mode=form_post&nonce=1234567890
+
+https://login.microsoftonline.com/7bf7ca02-20a6-..../oauth2/authorize?client_id=32664b05-d0b8-....&redirect_uri=https://oidcdebugger.com/debug&scope=https://graph.windows.net&response_type=code%20id_token&response_mode=form_post&nonce=1234567890
+
+
+### I received the code now I can exchange it for a token
+
+POST {{tokenEndpoint}}
+Content-Type: application/x-www-form-urlencoded
+ 
+grant_type=authorization_code&
+code=1.ARoAAsr3e6Ygx0yjXY-pxf1FKQVLZjK40HxPpUnNMhdlpSvMAKwaAA.AgABBAIAAADW6jl31mB3T7ugrWTT8pFeAwDs_wUA9P81JxfWY-htrlHKx2j94Honu6JjcJrhTAiH__f9o_bXdTEII8UwkiZo4ull0IZ8GbC9hQDBwRBiE2hNvemigAcWq8uTF4_yp9uXktSPnT3Y1zslYTFJQVZnVVLR_DVqxFS_QpLK2jiH8wH_sOY_O85Y0guSJrctt18buNhDytjdWwCkAiEfBrxL44q1RnrP6bcdaj2hhPBB861B7rCac3_8Vt2U9egkXLq8SMxEDmoashpXkrZ9d5n-yNYWQiUJKbmSyasfIgrmXegq9GxvRjMWYIklf2tJUjcg2cNrh4kc9m64VLHrG9xySSk28gfoJtvwnNE_Uk4Rtpg3D4sPBAVZ556ODCud0uJW24__vzdLGNj8Y9b8y&
+client_id={{clientId}}&
+client_secret={{clientSecret}}&
+redirect_uri={{redirectUri}}
+
+###

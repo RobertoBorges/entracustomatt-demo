@@ -22,6 +22,8 @@ namespace nonprodborges
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
 
+            _logger.LogInformation($"Received from Entra {JsonConvert.SerializeObject(data)}");
+
             // Read the correlation ID from the Microsoft Entra request    
             string correlationId = data?.data.authenticationContext.correlationId;
 
